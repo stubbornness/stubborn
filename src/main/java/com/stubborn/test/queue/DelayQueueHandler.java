@@ -1,4 +1,4 @@
-package com.stubborn.test.delayQueue;
+package com.stubborn.test.queue;
 
 import org.springframework.stereotype.Component;
 
