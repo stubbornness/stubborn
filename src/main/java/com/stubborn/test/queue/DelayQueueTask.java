@@ -1,4 +1,4 @@
-package com.stubborn.test.delayQueue;
+package com.stubborn.test.queue;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
