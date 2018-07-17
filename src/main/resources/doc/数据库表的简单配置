@@ -1,0 +1,47 @@
+CREATE TABLE tb_novice_Boot_validate (
+    ID BIGINT(20) NOT NULL AUTO_INCREMENT,
+    USER_CODE VARCHAR(32) NOT NULL COMMENT '用户id',
+    GAME_EN VARCHAR(20) NOT NULL COMMENT '游戏英文名字',
+    CREATE_TIME TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    UPDATE_TIME TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (ID),
+    UNIQUE KEY USER_CODE_UNIQUE (USER_CODE)
+)  ENGINE=INNODB AUTO_INCREMENT=100 DEFAULT CHARSET=UTF8MB4;
+
+# Table, Create Table
+CREATE TABLE `tb_novice_victory_record` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `USER_CODE` varchar(32) NOT NULL COMMENT '用户id',
+  `GAME_ID` bigint(20) NOT NULL COMMENT '游戏id',
+  `GAME_NAME` varchar(50) NOT NULL COMMENT '游戏名称',
+  `PERIOD_ID` varchar(50) DEFAULT NULL COMMENT '期次',
+  `ORDER_ID` varchar(50) DEFAULT NULL COMMENT '订单号',
+  `STATUS` tinyint(2) NOT NULL COMMENT '派奖状态：非空，0是未派奖，1是已派奖',
+  `BET_TIME` timestamp NULL DEFAULT NULL,
+  `BET_AMOUNT` int(11) NOT NULL DEFAULT '0' COMMENT '投注金额',
+  `BONUS_AMOUNT` int(11) NOT NULL DEFAULT '0' COMMENT '获奖金额',
+  `TOTAL_AMOUNT` int(11) NOT NULL DEFAULT '0' COMMENT '盈亏金额',
+  `CREATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `UPDATE_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `UNIQ_ORDER_ID` (`ORDER_ID`),
+  KEY `IDX_USER_CODE` (`USER_CODE`)
+) ENGINE=InnoDB AUTO_INCREMENT=160534 DEFAULT CHARSET=utf8mb4
+
+
+show create table;
+
+//查询数据再插入
+insert into quizzes.tb_defriend_user_info (USER_CODE,REGISTER_TIME)
+select USER_id,create_time from tb_user_info where user_id in(00300152777194955526544608,
+00300152777195497645710512
+)
+
+mybatis 插入
+<insert id="insertOrderSeq" parameterType="orderSeqReq">
+    <selectKey keyProperty="orderSeq" resultType="java.lang.Long" order="AFTER">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+    replace into tb_order_sequence(stub) values (#{stub, jdbcType=VARCHAR})
+</insert>
+
