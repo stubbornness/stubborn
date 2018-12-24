@@ -1,4 +1,4 @@
-package com.stubborn.game;
+package com.stubborn.java.strategyPattern.bjlGame;
 
 import java.util.HashMap;
 import java.util.Map;
