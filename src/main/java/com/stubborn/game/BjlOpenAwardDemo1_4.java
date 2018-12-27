@@ -6,11 +6,11 @@ import java.util.Map;
  * @author 丁少东
  * @create 2018-12-06 上午9:24
  **/
-public class BjlOpenAwardDemo1 {
+public class BjlOpenAwardDemo1_4 {
 
-    //第一种场景闲获胜
-    public static Map<String,Integer> openAwardEvent1(){
-        Map<String, Integer> map = GameUtil.outputCard( 1,  1);
+    public static Map<String,Integer> openAwardEvent1_4(){
+
+        Map<String, Integer> map = GameUtil.outputCard( 0,  1);
         int cardRandom1 = map.get("1");
         int cardRandom2 = map.get("2");
         int cardRandom3 = map.get("3");
@@ -32,44 +32,32 @@ public class BjlOpenAwardDemo1 {
                     if (cardRandom4 == 1){
                         cardRandom2 = GameUtil.commonOutputCard(6, 1);
                     }else{
-                        cardRandom4 = cardRandom4 - 1;//没有庄对闲对
+                        cardRandom4 = cardRandom4 - 1;
                     }
                 }
                 map.put("2",cardRandom2);
                 map.put("4",cardRandom4);
                 return map;
             }
-            if (result == 2){//庄赢(相互换牌)
-                return GameUtil.changeCard(map);
+            if (result == 2){//重新开特定的牌
+                return newOutputRandom(map);
             }
         }
 
         int cardRandom5 = 0;//闲家补牌
         int cardRandom6 = 0;//庄家补牌
-        if (playAdd >= 0 && playAdd <= 5){//  一闲家补牌
+        if (playAdd >= 0 && playAdd <= 5){//  一闲家补牌(闲家有闲对：０，２，４，６)
             if (bankAdd == 7){// 庄不补牌
                 if (playAdd == 0){
                     String str = "8,9";
-                    cardRandom5 = GameUtil.outRandomNumByStr(str);
-                }
-                if (playAdd == 1){
-                    String str = "7,8";
                     cardRandom5 = GameUtil.outRandomNumByStr(str);
                 }
                 if (playAdd == 2){
                     String str = "6,7";
                     cardRandom5 = GameUtil.outRandomNumByStr(str);
                 }
-                if (playAdd == 3){
-                    String str = "5,6";
-                    cardRandom5 = GameUtil.outRandomNumByStr(str);
-                }
                 if (playAdd == 4){
                     String str = "4,5";
-                    cardRandom5 = GameUtil.outRandomNumByStr(str);
-                }
-                if (playAdd == 5){//
-                    String str = "3,4";
                     cardRandom5 = GameUtil.outRandomNumByStr(str);
                 }
                 map.put("5",cardRandom5);
@@ -131,18 +119,18 @@ public class BjlOpenAwardDemo1 {
                             cardRandom6 = GameUtil.outRandomNumByStr(str);
                             map.put("6",cardRandom6);
                             return map;
-
                         }
+
                         if (cardRandom5 == 9){
                             String str = "1,2,3,4,5,6,7,8,10,11,12,13";
                             cardRandom6 = GameUtil.outRandomNumByStr(str);
                             map.put("6",cardRandom6);
                             return map;
-
                         }
                     }
+
                     if (bankAdd == 1){//闲和是0，庄和是1
-                        cardRandom5 = GameUtil.commonOutputCard(9, 1);//23456789
+                        cardRandom5 = GameUtil.commonOutputCard(9, 1);//[1,9]
                         map.put("5", cardRandom5);
                         if (cardRandom5 == 1){
                             map.put("6",9);
@@ -2089,7 +2077,15 @@ public class BjlOpenAwardDemo1 {
 
     }
 
-    public static Map<String, Integer> dealPlayWin(Map<String, Integer> map){
+    private static Map<String,Integer> newOutputRandom(Map<String, Integer> map) {
+        map.put("1", 9);
+        map.put("3", 9);
+        String str1 = "1,2,3,4,5,6,7,8,9,10,11,12,13";
+        String str2 = "10,11,12,13,1,4,5,6,2,1,13,7,3,5";
+        return GameUtil.outMapRandomNumByStr(str1, str2, map);
+    }
+
+    private static Map<String,Integer> dealPlayWin(Map<String, Integer> map){
         int cardRandom6 = 0;
         int index = GameUtil.commonOutputCard(6, 0);
         if (index == 0){
@@ -2154,7 +2150,6 @@ public class BjlOpenAwardDemo1 {
         }
         return null;
     }
-
 
 }
 
