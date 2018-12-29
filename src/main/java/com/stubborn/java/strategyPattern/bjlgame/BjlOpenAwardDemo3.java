@@ -1,15 +1,14 @@
-package com.stubborn.game;
+package com.stubborn.java.strategyPattern.bjlgame;
 
 import java.util.Map;
-import java.util.Random;
 
 /**
  * @author 丁少东
  * @create 2018-12-25 下午6:59
  **/
-public class BjlOpenAwardDemo3 {
+public class BjlOpenAwardDemo3 implements BjlOpenAwardInterface {
     //和赢
-    public static Map<String,Integer> openAwardEvent3(){
+    public  Map<String,Integer> outputCard(){
         Map<String, Integer> map = GameUtil.outputCard( 1,  1);
         int cardRandom1 = map.get("1");
         int cardRandom2 = map.get("2");
@@ -795,7 +794,7 @@ public class BjlOpenAwardDemo3 {
     }
 
 
-    public static Map<String, Integer> dealPlayWin(Map<String, Integer> map, int index){
+    public  Map<String, Integer> dealPlayWin(Map<String, Integer> map, int index){
         if (index == 6){
             String str1 = "1,2,5,4,10,11,12,13";
             String str2 = "5,4,1,2,6,6,6,6";
