@@ -49,6 +49,7 @@
             <version>1.2.6</version>
         </dependency>
 
+
 	<!--	<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId> &lt;!&ndash; Use 'netty-all' for 4.0 or above &ndash;&gt;

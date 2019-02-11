@@ -1,4 +1,4 @@
-package com.stubborn.game;
+package com.stubborn.java.strategyPattern.bjlgame;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +9,95 @@ import java.util.Random;
  * @create 2018-12-24 下午4:03
  **/
 public class GameUtil {
+
+    public static final String OPEN_AWARD_EVENT1 = "1";
+    public static final String OPEN_AWARD_EVENT2 = "2";
+    public static final String OPEN_AWARD_EVENT3 = "3";
+    public static final String OPEN_AWARD_EVENT1_4 = "1_4";
+    public static final String OPEN_AWARD_EVENT1_5 = "1_5";
+    public static final String OPEN_AWARD_EVENT2_4 = "2_4";
+    public static final String OPEN_AWARD_EVENT2_5 = "2_5";
+    public static final String OPEN_AWARD_EVENT3_4 = "3_4";
+    public static final String OPEN_AWARD_EVENT3_5 = "3_5";
+    public static final String OPEN_AWARD_EVENT1_4_5 = "1_4_5";
+    public static final String OPEN_AWARD_EVENT2_4_5 = "2_4_5";
+    public static final String OPEN_AWARD_EVENT3_4_5 = "3_4_5";
+
+    public static Class<? extends BjlOpenAwardInterface> outEvent(){
+        String eventResult1 = "";
+        String eventResult2 = "";
+        String eventResult3 = "";
+        String result = "";
+
+        //开闲和庄
+        Integer randomEvent1 = GameUtil.commonOutputCard(1000000, 1);
+        if (1 <= randomEvent1 && randomEvent1 <= 458597){
+            eventResult1 = "1_";//开闲
+            result = result + eventResult1;
+        }else if(randomEvent1 <= 904844){
+            eventResult1 = "2_";//开庄
+            result = result + eventResult1;
+        }else {
+            eventResult1 = "3_";//开和
+            result = result + eventResult1;
+        }
+        //开闲对
+        Integer randomEvent2 = GameUtil.commonOutputCard(1000000, 1);
+        if (0 <= randomEvent2 && randomEvent2 <= 76499){
+            eventResult2 = "4_";
+            result = result + eventResult2;
+        }
+        //开庄对
+        Integer randomEvent3 = GameUtil.commonOutputCard(1000000, 1);
+        if (0 <= randomEvent3 && randomEvent3 <= 76499){
+            eventResult3 = "5_";
+            result = result + eventResult3;
+        }
+
+        result = result.substring(0,result.length() - 1);
+        Class<? extends BjlOpenAwardInterface> calss = null;
+        switch (result) {
+            case OPEN_AWARD_EVENT1:
+                calss = BjlOpenAwardDemo1.class;
+                break;
+            case OPEN_AWARD_EVENT2:
+                calss = BjlOpenAwardDemo2.class;
+                break;
+            case OPEN_AWARD_EVENT3:
+                calss = BjlOpenAwardDemo3.class;
+                break;
+            case OPEN_AWARD_EVENT1_4:
+                calss = BjlOpenAwardDemo1_4.class;
+                break;
+            case OPEN_AWARD_EVENT1_5:
+                calss = BjlOpenAwardDemo1_5.class;
+                break;
+            case OPEN_AWARD_EVENT2_4:
+                calss = BjlOpenAwardDemo2_4.class;
+                break;
+            case OPEN_AWARD_EVENT2_5:
+                calss = BjlOpenAwardDemo2_5.class;
+                break;
+            case OPEN_AWARD_EVENT3_4:
+                calss = BjlOpenAwardDemo3_4.class;
+                break;
+            case OPEN_AWARD_EVENT3_5:
+                calss = BjlOpenAwardDemo3_5.class;
+                break;
+            case OPEN_AWARD_EVENT1_4_5:
+                calss = BjlOpenAwardDemo1_4_5.class;
+                break;
+            case OPEN_AWARD_EVENT2_4_5:
+                calss = BjlOpenAwardDemo2_4_5.class;
+                break;
+            case OPEN_AWARD_EVENT3_4_5:
+                calss = BjlOpenAwardDemo3_4_5.class;
+                break;
+        }
+        calss = BjlOpenAwardDemo1_4.class;
+        return calss;
+    }
+
     /**
      * 换牌
      * @param map
