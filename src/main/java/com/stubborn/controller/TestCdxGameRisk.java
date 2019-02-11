@@ -35,7 +35,7 @@ public class TestCdxGameRisk {
     @Value("${cdxBetOrderUrl}")
     private String cdxBetOrderUrl;
 
-    @Scheduled(fixedDelay = EXECUTION_TIME)
+    //@Scheduled(fixedDelay = EXECUTION_TIME)
     public void testGameRisk() {
         String periodRes = HttpServiceUtils.sendRequest(cdxPeriodUrl);
         JSONObject period = JSONObject.parseObject(JSONObject.parseObject(periodRes).getString("resp"));

@@ -1,12 +1,15 @@
+/*
 package com.stubborn.test;
 
 import com.stubborn.util.CommonUtil;
 import java.util.*;
 
+*/
 /**
  * @author 丁少东
  * @create 2019-01-18 上午9:51
- **/
+ **//*
+
 public class TestRemoveList {
 
 
@@ -15,19 +18,55 @@ public class TestRemoveList {
     private static final String TIGER_WIN = "3";
 
     private static final String HE = "2";
- /*   public static void main(String[] args) {
+ */
+/*   public static void main(String[] args) {
         List<String> list = new ArrayList<>(Arrays.asList("3","3","1","3","2","3"));
         System.out.println(removeTieList(list));
 
-    }*/
+    }*//*
 
 
- /*   public static List<String> removeTieList(List<String> list){
+
+ */
+/*   public static List<String> removeTieList(List<String> list){
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ * @author 丁少东
+ * @create 2018-12-12 下午6:38
+ **//*
+
+public class TestRemoveList {
+  */
+/*  public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        String s1 = "3";
+        String s2 = "3";
+        String s3 = "3";
+        String s4 = "1";
+        String s5 = "3";
+        String s6 = "2";
+        String s7 = "3";
+        String s8 = "2";
+        String s9 = "2";
+        list.add(s1);
+        list.add(s2);
+        list.add(s3);
+        list.add(s4);
+        list.add(s5);
+        list.add(s6);
+        list.add(s7);
+        list.add(s8);
+        list.add(s9);
+
         Iterator<String> it = list.iterator();
         int x = 0;
         int y = 0;
         while (it.hasNext()){
             if (it.next().contains("3")){
+            if ("3".equals(it.next())){
                 if (x == y){
                     it.remove();
                     y++;
@@ -38,18 +77,22 @@ public class TestRemoveList {
         }
         return list;
 
-    }
+    }*//*
 
 
-  *//*  public static void main(String[] args) {
+
+*/
+/*   public static void main(String[] args) {
         List<String> list = new ArrayList<>(Arrays.asList("1","2","3"));
         list.get(4);
     }*//*
 
-    public static void main(String[] args) {
-       *//* String str = "008_11_12";
+
+   */
+/* public static void main(String[] args) {
+       String str = "008_11_12";
         str = str.substring(0,4);
-        System.out.println(str);*//*
+        System.out.println(str);
         BigDecimal totalAmount = new BigDecimal(4000);
         BigDecimal returnAmount = new BigDecimal(6000);//总返奖金额
 
@@ -58,38 +101,48 @@ public class TestRemoveList {
 
         }
 
-    }*/
+    }*//*
 
 
- /*   public final static Map<String, String> initMap = new HashMap();
+
+ */
+/*   public final static Map<String, String> initMap = new HashMap();
 
     static {
         initMap.put("1", "1,2,3,4,5");
         initMap.put("2", "7,8,9,10,11");
         initMap.put("3", "6");
-    }*/
+    }*//*
+
 
     public static final String DA = "1";
     public static final String XIAO = "2";
     public static final String FA = "3";
 
+*/
 /*    public static void main(String[] args) {
         TestRemoveList testRemoveList = new TestRemoveList();
         testRemoveList.openAward(12L,"12");
-    }*/
+    }*//*
 
-    /*   public static void main(String[] args) {
+
+    */
+/*   public static void main(String[] args) {
            String prePeriodId = String.valueOf(Long.parseLong("218201901231056") - 1);
            System.out.println(prePeriodId);
 
-       }*/
-    public static void main(String[] args) {
+       }*//*
+
+ */
+/*   public static void main(String[] args) {
         for (int i = 0; i < 100 ; i++) {
             System.out.println(riskManage(new ArrayList<>(Arrays.asList("1","3"))));
         }
-    }
+    }*//*
 
-    public static Map<String, String> riskManage(List<String> list){
+
+    */
+/*public static Map<String, String> riskManage(List<String> list){
         int size = list.size();
         if (size == 0 || size ==3){
             return commonOutputCase();
@@ -116,9 +169,11 @@ public class TestRemoveList {
             int gameNum = Integer.valueOf(randomNumArr[randomNum]);
             return specialOutputCase(outputGameCaseByNumber(gameNum));
         }
-    }
+    }*//*
 
-    public static String outputGameCaseByNumber(int randomNum){
+
+    */
+/*public static String outputGameCaseByNumber(int randomNum){
         String result = null;
         if (randomNum > 7) {
             result = TIGER_WIN;
@@ -128,11 +183,13 @@ public class TestRemoveList {
             result = HE;
         }
         return result;
-    }
+    }*//*
 
 
 
-    public static Map<String, String> specialOutputCase(String symbol){
+
+    */
+/*public static Map<String, String> specialOutputCase(String symbol){
         String winningNumber = null;
         int randomLoong = new Random().nextInt(13) + 1;
         int randomTiger = new Random().nextInt(13) + 1;
@@ -168,10 +225,12 @@ public class TestRemoveList {
         map.put("result", symbol);
         map.put("winningNumber", winningNumber);
         return map;
-    }
+    }*//*
 
 
-    public static Map<String,String> commonOutputCase(){
+
+    */
+/*public static Map<String,String> commonOutputCase(){
         String winningNumber = null;
         int randomLoong = new Random().nextInt(13) + 1;
         int randomTiger = new Random().nextInt(13) + 1;
@@ -188,13 +247,13 @@ public class TestRemoveList {
         map.put("winningNumber", winningNumber);
         return map;
     }
+*//*
 
 
-
-
-
+       // System.out.println(list);
 
 
 
 
 }
+*/

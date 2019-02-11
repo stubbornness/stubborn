@@ -36,7 +36,7 @@ public class TestBjlGameRisk {
 
 
 
-    @Scheduled(fixedDelay = EXECUTION_TIME)
+    //@Scheduled(fixedDelay = EXECUTION_TIME)
     public void testGameRisk() {
         //gameEn=bjl&betFlag=0&rawNumber=218201901031349%23001%7c1~100|2~100|3~100|
         String periodRes = HttpServiceUtils.sendRequest(bjlPeriodUrl);

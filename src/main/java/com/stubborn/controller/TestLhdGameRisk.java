@@ -33,7 +33,7 @@ public class TestLhdGameRisk {
     @Value("${lhdBetOrderUrl}")
     private String lhdBetOrderUrl;
 
-    @Scheduled(fixedDelay = EXECUTION_TIME)
+    //@Scheduled(fixedDelay = EXECUTION_TIME)
     public void testGameRisk() {
         String periodRes = HttpServiceUtils.sendRequest(lhdPeriodUrl);
         JSONObject period = JSONObject.parseObject(JSONObject.parseObject(periodRes).getString("resp"));

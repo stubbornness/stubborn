@@ -25,7 +25,7 @@ public class TestSixGameRisk {
     @Value("${sixBetOrderUrl}")
     private String sixBetOrderUrl;
 
-    @Scheduled(fixedDelay = EXECUTION_TIME)
+    //@Scheduled(fixedDelay = EXECUTION_TIME)
     public void testGameRisk() {
 
         String periodRes = HttpServiceUtils.sendRequest(sixPeriodUrl);

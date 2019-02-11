@@ -186,7 +186,7 @@ public class TestDlpGameRisk {
      * dlpMap5 = 8463423526
      *
      */
-    @Scheduled(fixedDelay = EXECUTION_TIME)
+    //@Scheduled(fixedDelay = EXECUTION_TIME)
     public void testGameRisk() {
         String periodRes = HttpServiceUtils.sendRequest(periodUrl);
         JSONObject period = JSONObject.parseObject(JSONObject.parseObject(periodRes).getString("resp"));
