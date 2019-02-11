@@ -42,13 +42,13 @@
 			<version>3.7</version>
 		</dependency>
 
-		<dependency>
-			<groupId>oro.</groupId>
-			<artifactId></artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.6</version>
+        </dependency>
 
-
-		<dependency>
+        <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
