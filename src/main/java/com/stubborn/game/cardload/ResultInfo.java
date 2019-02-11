@@ -12,7 +12,6 @@ import java.io.Serializable;
  * @create 2018-12-12 下午6:50
  **/
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class ResultInfo implements Serializable {

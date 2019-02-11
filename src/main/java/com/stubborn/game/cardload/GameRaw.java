@@ -15,7 +15,6 @@ import java.util.List;
  * @create 2018-12-12 下午6:50
  **/
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class GameRaw implements Serializable {
