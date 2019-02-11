@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: test
+
+
+periodUrl: "http://casino.111max.com/api/dlpGame/getCurrentPeriod?gameEn=dlp"
+betOrderUrl: "http://casino.111max.com/api/dlpGame/betOrder?"
+
+sixPeriodUrl: "http://casino.111max.com/api/gamePeriod/getCurrentPeriod?gameEn=liuliuliu"
+sixBetOrderUrl: "http://casino.111max.com/api/gameOrder/betOrder?"
+
+cdxPeriodUrl: "http://casino.111max.com/api/gamePeriod/getCurrentPeriod?gameEn=caiDx"
+cdxBetOrderUrl: "http://casino.111max.com/api/gameOrder/betOrder?"
+
+lhdPeriodUrl: "http://casino.111max.com/api/gamePeriod/getCurrentPeriod?gameEn=lhd"
+lhdBetOrderUrl: "http://casino.111max.com/api/lhdGame/betOrder?"
+
+bjlPeriodUrl: "http://casino.111max.com/api/gamePeriod/getCurrentPeriod?gameEn=bjl"
+bjlBetOrderUrl: "http://casino.111max.com/api/bjlGame/betOrder?"
+
+
+

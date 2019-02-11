@@ -7,9 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Singal
- */
+
 public class CommonConstant {
     public static final ThreadLocal<HttpServletRequest> requestTL = new ThreadLocal<>(); //保存request的threadlocal
     public static final ThreadLocal<HttpServletResponse> responseTL = new ThreadLocal<>(); //保存response的threadlocal
@@ -45,53 +43,29 @@ public class CommonConstant {
     public static final int ONE = 1;
     public static final int BAK_INSERT_ERROR = -1;
     public static final int BAK_DEL_ERROR = -2;
-    public static final int PAGE_COUNT = 10;//订单列表每页显示的数据数量
+    public static final int SMALLORDOUBLE = 1;
+    public static final int BIGORSMALL = 2;
+    public static final int PAGECOUNT = 15;
     public static final int BEAN_LIST_PAGE_COUNT = 20;//金豆明细列表每页显示的数据数量
-
-    public static final String THRID_CPS_MZ_BALANCER = "mzbalancer";
-
-    public static final String COMMON_GAME_STOP_ALERT_20_CLOCK = "20:00:00";
-    public static final String COMMON_GAME_STOP_ALERT_12_CLOCK = "12:00:00";
-
+    //工程
+    public static final String PROJECT = "admin";
     //分隔符
     public static final String SEPARATOR_LINE = System.getProperty("line.separator");
     public static final String SEPARATOR_FILE = System.getProperty("file.separator");
 
-    public final static String BEAN_NAME_GAME_ID = "gameId";
-    public final static String BEAN_NAME_TASK_ID = "taskId";
-    public final static String BEAN_NAME_PLATFORM_ID = "platformId";
-    public final static String[] BEAN_NAME_ALL_ARRAY = new String[]{BEAN_NAME_GAME_ID, BEAN_NAME_TASK_ID,
-            BEAN_NAME_PLATFORM_ID};
-    public final static String[] BEAN_NAME_GAME_ARRAY = new String[]{BEAN_NAME_GAME_ID};
-    public final static String[] BEAN_NAME_GAME_TASK_ARRAY = new String[]{BEAN_NAME_GAME_ID, BEAN_NAME_TASK_ID};
+    public static final int MAX_COMPRESS_TIME = 1000;//Gzip压缩和解压缩时间限制MS
+    public final static Map<String, String> SCHEDULE_BEAN_MAP = new HashMap<>();
+
+    public static final String SWITCH_OFF = "OFF";
+    public static final String SWITCH_ON = "ON";
 
     //tableShard
     public static final String SHARD_BY_USER_CODE = "userCode";
     public static final String SHARD_BY_GAME_ID = "gameId";
     public static final String SHARD_BY_PERIOD_ID = "periodId";
-    public static final String SHARD_BY_ORDER_ID = "orderId";
 
-    public final static Map<String, String> SCHEDULE_BEAN_MAP = new HashMap<>();
-
-
-    public static final String DEFAULT_STOP_SALE_MESSAGE = "大爷，这会儿暂停接客啦，您晚点再来呗~";
-
-    public static final String DESK_SERVICE_KEY_WORD = "[ServiceDesk]:";
-
-    public static final String BET_SINGLE = "1";
-
-    public static final String PERIOD_STATUS_INIT = "000";
-    public static final String OPEN_AWARD = "110";
-    public static final String DISTRIBUTE_AWARD = "111";
-
-    //玩法类型，1:单双。2:大小
-    public static final String ODD_OR_EVEN = "001";
-    public static final String BIG_OR_SMALL = "002";
-//app urlheader的app信息
-    public static final String APP_INFO = "App-Info";
-    public static final String APP_SYS_IOS = "ios";
-    public static final String APP_SYS_ANDROID = "android";
-
+    public static final String RECHAGE_STATISTICS_WHITE_LIST = "RECHAGE_STATISTICS_WHITE_LIST";
+    public static final String all_white_list = "all_white_list";
 
     public static String generateHandleId(List<Object> params) {
         StringBuffer sb = new StringBuffer();
