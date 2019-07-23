@@ -1,4 +1,4 @@
-package com.stubborn.netty.demo;
+package com.stubborn.io.netty.demo;
 
 /**
  * @author 丁少东
