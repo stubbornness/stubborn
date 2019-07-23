@@ -1,4 +1,4 @@
-package com.stubborn.netty.officialnetty;
+package com.stubborn.io.netty.officialnetty;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
